@@ -10,7 +10,6 @@ import Merchandice from './Components/Merchandice'
 import AOC from './Components/AOC'
 
 class App extends React.Component {
-
   state = {
     section: 'Home'
   }
@@ -23,25 +22,20 @@ class App extends React.Component {
   }
 
   render() {
-
-    let page;
-
-    if (this.state.section === 'Home') {
-      page = <Home />
-    } else if (this.state.section === 'About') {
-      page = <About />
-    } else if (this.state.section ==='Platform') {
-      page = <Platform />
-    } else if (this.state.section === 'History') {
-      page = <History />
-    } else if (this.state.section === 'Merchandice') {
-      page = <Merchandice />
-    } else {page = <AOC />}
+    const section = this.state.section
+    const articles = {
+      'Home': <Home />,
+      'About': <About />,
+      'Platform': <Platform />,
+      'History': <History />,
+      'Merchandice': <Merchandice />,
+      'AOC': <AOC />
+    }
 
     return (
       <div className="App">
         <Header handleClick={this.handleClick}/>
-        {page}
+        {articles[section]}
         <Foot />
       </div>
     );

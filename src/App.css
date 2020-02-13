@@ -20,3 +20,6 @@ footer {
   padding: 1rem;
   cursor: pointer;
 }
+.section-heading:hover {
+  background-color: rgba(18, 92, 177, 0.856);
+}
