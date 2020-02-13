@@ -5,9 +5,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(20, 119, 231, 0.808);
+  background-color: rgba(20, 119, 231);
+}
+article {
+  margin-top: 5em;
 }
 footer {
   padding: 1rem;
